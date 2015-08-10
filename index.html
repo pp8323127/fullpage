@@ -43,12 +43,12 @@
 	}
 		/* Fixed header and footer.
 	* --------------------------------------- */
-	#header, #footer{
+	#header{
 		position:fixed;
 		height: 50px;
 		display:block;
 		width: 100%;
-		background: #333;
+		background: #337ab7;
 		z-index:9;
 		text-align:center;
 		color: #f2f2f2;
@@ -56,15 +56,58 @@
 	}
 
 	#header{
-		top:0px;
+		/*top:0px;*/
+		height: 70px;
+		margin-bottom: 20px;
 	}
+
 	#content{
-		padding:50px 100px 0 100px;
+		padding: 100px 100px 0px 100px;
+	}
+	.item{
+		display: inline-block;
+		float: none;
+		margin: 0px 20px 20px 20px;
 	}
 	.item a{
-		color:black;
+		color: #666;
 		line-height: 58px;
 	}
+	#menu{
+		top: inherit;
+		left: inherit;
+	}
+	#menu li a{
+		color: #555;
+	}
+	#menu li{
+		background: rgba(255,255,255,.95);
+	}
+	#footer{
+		position: fixed;
+		bottom: 0px;
+		text-align: center;
+		width: 100%;
+		padding: 10px;
+		background: #fff;
+		box-shadow: 0px -11px 8px -20px #eee, 0px -11px 8px -10px #eee;
+	}
+	#footer p{
+		font-size: 14px;
+		color: #ccc;
+	}
+
+
+	.fp-controlArrow.fp-next{
+		border-color: transparent transparent transparent #ddd;
+		border-width: 38.5px 0 38.5px 50px;
+	}
+	.fp-controlArrow.fp-prev{
+		border-color: transparent #ddd transparent transparent;
+		border-width: 38.5px 50px 38.5px 0;
+	}
+
+
 	</style>
 
 	<!--[if IE]>
@@ -84,7 +127,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#4A6FB1'],
+				sectionsColor: ['#fff'],
 				scrollOverflow: true
 			}); 
 		});
@@ -101,6 +144,7 @@
 		<li><a href="#slide5">杯子</a></li>
 	</ul>
 </div>
+
 <div id="fullpage">
 
 	<div class="section" id="section1">
@@ -171,8 +215,10 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-			
-</script>
+
+<div id="footer">
+	<p>&copy; Copyright 2015, E508 Lab. All Rights Reserved.</p>
+</div>
+
 </body>
 </html>
